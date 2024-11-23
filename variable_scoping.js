@@ -48,3 +48,54 @@
 //     console.log(c)//but  can not  access the child in parent  
 // }
 
+//global scope 
+//  var x = "Hi! ihsan ullah"
+
+//  function name(){
+//     console.log(x)
+//  }
+//  name();//global veriable are accessable from anywhere
+
+//  console.log(x)
+
+//function scope
+
+// function example(){
+//     var fs = "Hi ! ihsan ullah";
+//     console.log(fs)
+// }
+// example();
+// console.log(fs)//not accessbile outside from the function
+
+//block scope 
+
+// function ihsan(){
+//     let a = "ihsan ullah orakzai";
+//     if(true){
+//         console.log(a)// parent are acccessed in child node
+//     }
+// }
+// ihsan();
+
+// function ihsan(){
+//     let a = "ihsan ullah orakzai";
+//     if(true){
+//     }
+//     console.log(a)
+// }
+// ihsan();
+
+
+
+// function ihsan(){
+//     const c = "from hangu"
+//     if(true){
+//         let a = "ihsan ullah orakzai";
+//         console.log(a)//child are only accesses in child node
+//     }
+//     console.log(c)
+// }
+
+// ihsan();
+
+
