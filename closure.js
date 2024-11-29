@@ -15,12 +15,16 @@
 //     function inner (){
 //         console.log( "inner : " ,userName)
 //         let message = "how are u";
+//         console.log(message)
 // }
 //     inner();
     
 // }
 // outer();
 // console.log("outer : " , userName);
+
+ 
+
 
 //CLOSURE
 
