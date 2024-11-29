@@ -10,6 +10,26 @@
 // }
 
 
+// let a = 5
+// const b = 6
+// var c = 7
+// {
+//     console.log(a)
+//     console.log(b)
+//     console.log(c)
+// }
+
+
+// let a = 5
+// const b = 6
+// var c = 7
+// {
+     
+// }
+// console.log(a)//accessed 
+// console.log(b)//accessed
+// console.log(c)//accessed
+
 // {
 // let a =10;
 // const b = 20;
@@ -98,5 +118,26 @@
 // }
 
 // ihsan();
+
+// let a = "ihsan ullah";
+// function info(){
+//     let b = "orakzai"
+//     console.log(a);
+//     console.log(b)
+// }
+// info()
+
+// let a = "ihsan ullah";
+// function info(){
+//     let b = "orakzai"
+//     console.log(a);
+    
+// }
+// info()
+// console.log(b)//give error b is not defined
+
+
+
+
 
 
