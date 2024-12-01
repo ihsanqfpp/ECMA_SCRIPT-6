@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring Array</title>
+</head>
+<body>
+    <h1>Destructuring Array in  Advance JavaScript</h1>
+</body>
+<script>
+// let user = ["ihsan ullah" , 25 , "peshawar"];
+
+// let [name ,age , city] = user;
+// //console.log(user);
+// console.log(name);
+// console.log(age);
+// console.log(city);
+
+//IF WE REMOVE ONE OR TWO OR MORE VALUE FROM ARRAY THEY SHOW UNDEFINED
+
+// let user = ["ihsan ullah" , 25 ,];
+
+// let [name ,age , city] = user;
+// console.log(name);
+// console.log(age);
+// console.log(city);//they show undefined bcz city isn't present in array
+
+//IF WE DONT'T WRITE VALUE IN ARRAY
+// let user = [ , 25 , "peshawar"];
+// let [name = "ihsan " ,age  , city] = user;
+// console.log(name);
+// console.log(age);
+// console.log(city);
+
+//IT ALSO WORK ON NESTED ARRAY SO LET'S TRY
+// let user = ["ihsan ullah" , 25 , "peshawar",["male", 25000]];
+// let [name ,age , city,[gender,salary]] = user;
+// console.log(name);
+// console.log(age);
+// console.log(city);
+// console.log(gender);
+// console.log(salary);
+
+// let user = ["ihsan ullah" , 25 , "peshawar"];
+// let [name , ...args] = user;
+// console.log(name);
+// console.log(args);
+
+
+//USED IN FUNCTION
+
+// function user ([name, age , city]){
+// console.log(name);
+// console.log(age);
+// console.log(city);
+// }
+// user(["ihsan ullah", 25, "hangu"])
+
+//ANOTHER EXAMPLE WITH RETURN FUNCTION
+
+// function user (){
+// return ["ihsan ullah", 25, "orakzai"]
+// }
+//  let [name, age, tribe] = user();
+//  console.log(name);
+//  console.log(age);
+//  console.log(tribe);
+</script>
+
+
+</html>
