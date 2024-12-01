@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Default Parameters</title>
+</head>
+<body>
+    <h1>Default Parameters in JavaScript</h1>
+</body>
+<script>
+    //ES5 
+    // function mult(a,b){
+    //     console.log(a * b);
+    // }
+    // mult(3,4);
+
+    // function mult(a,b){
+    //     console.log(a * b);
+    // }
+    // mult(3);//return undefined
+
+    // function mult(a,b){
+    //     b = (typeof b !== 'undefined') ? b : 3
+    //     console.log(a * b);
+    // }
+    // mult(4);
+
+
+//NOW IN ES6
+
+// function mult(a,b = 5){
+//         console.log(a * b);
+//     }
+//     mult(4);
+
+//BY THE ARROW FUNCTION
+
+// const add = (a,b) => {
+//     console.log(`the addition of ${a} and ${b} is : ${a + b}`)
+// }
+// add(4,24)
+
+// const add = (a,b = 5) => {
+//     console.log(`the addition of ${a} and ${b} is : ${a + b}`)
+// }
+// add(4)
+
+
+
+
+</script>
+</html>
