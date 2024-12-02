@@ -11,6 +11,18 @@
 <script>
     //HOISTING
 
+//RIGHT WAY
+// let a = "ihsan ullah";
+// console.log(a);
+
+//WRONG WAY 
+//in var case declaration moved to top but not intilization
+//console.log(b);
+// var a = 'ihsan ullah'//in var output is undefined
+// let b = 'ihsan ullah'//output is refrence error can't access 'b' before  intilization
+// const c = 'ihsan ullah'//output is refrence error can't access 'c' before intilization
+
+//FUNCTION HOISTING
     //METHOD 1
 //     function add(a,b){
 //         return a+b;
@@ -32,7 +44,7 @@
 // }
 // console.log(multi(c,g))
 
-//METHOD 5
+//METHOD 4
 // let c = 40;
 // let g = 55;
 // function multi(){
@@ -41,16 +53,72 @@
 
 // return c * g;//show error
 
+//METHOD 5
+// console.log(add(5,4))//output is 9 
+
+// function add(a,b){
+//     return a + b;
+// }
 
 
-//FUNCTION EXPRESSION
+//FUNCTION EXPRESSION CAN BE ANONYMOUS FUNCTION
 // let add1 = function (a,b){
 //     return a  + b;
 // }
 // console.log(add1(6,9))
 
+//METHOD 2
+// console.log(add1(6,9))//Uncaught ReferenceError: Cannot access 'add1' before initialization
+// let add1 = function (a,b){
+//     return a  + b;
+// }
+
+
+//METHOD 3
+// let multi =function(num1,num2){
+//     return num1 * num2;
+// }
+// let result = multi(5,5);
+// console.log(result);
+
+//METHOD 4
+
+// let welcome = function(){
+//     return "hello & welcome";
+// }
+// console.log(welcome())
+
+//METHOD 5
+// let welcome = function(){
+//      console.log("hello & welcome")
+// }
+// welcome()
+
+//METHOD 6
+// let welcome = function(name){
+//     return `hello & welcome ${name}`;
+// }
+// console.log(welcome("ihsan ullah"))
+
+
 
 //ARROW FUNCTION
+// let hello = () => console.log("hello");
+// hello();
+
+// let welcome = (name ,age) => {
+//     return `hello & welcome ${name} your age is : ${age}`;
+// }
+// console.log(welcome("ihsan ullah",22))
+
+//USE WHEN U HAVE SINGLE LINE OF CODE 
+// let welcome = (name ,age) => `hello & welcome ${name} your age is : ${age}`;
+// console.log(welcome("ihsan ullah",22))
+// console.log(typeof welcome)//return its type which is function
+
+//ARROW FUNCTION IN ONE LINE WHEN U HAVE ONLY 1 VEARIABLE
+// let welcome = name =>  `hello & welcome ${name}`
+// console.log(welcome("ihsan ullah"))
 
 // let add = (a,b) => {
 //     return a * b;
@@ -81,17 +149,28 @@
 // console.log(cube1(num));
 
 
-//ANONYMOUS FUNCTION
+//ANONYMOUS FUNCTION aisa function jiska naam na ho
+//hum tb banate haai jb hm main aik baar hii excuate karana ho
+//parameter main pass krna ho
 
 // let a = 3;
 // function out(){
 //     return function(){
-
 //     }
-    
 // }
 // out()
 // console.log(a)
+
+// function show (){
+//     console.log("hello! ihsan");
+// }
+// setTimeout(show, 3000)//set timeout is a function which take to parameters (functionname,time)
+
+
+
+// setTimeout(function (){
+//     console.log("hello! ihsan");
+// },3000)
 
 
 // let b  = 4;
