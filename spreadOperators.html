@@ -9,6 +9,81 @@
     <h1>Spread Operators in Advance JavaScript</h1>
 </body>
 <script>
-    
+
+//SPREAD OPERATORS IN ARRAY
+    // function sum(name, ...args){
+    //     let sum = 0;
+    //     for (let i in args){
+    //         sum +=args[i];
+    //     }
+    //     console.log(`the ${name} of these numbers is : ${sum}`)
+    // }
+    // let arr = [3,4,5,6]
+    // sum("addition", ...arr)
+
+    // let arr = [10,20,30,40];
+    // console.log([...arr])
+
+
+    // let arr = [10,20,30,40];
+    // let arr2 = arr;
+    // arr.push(60)
+    // //console.log([arr2])
+    // console.log(arr2)
+
+
+    // let arr = [10,20,30,40];
+    // let arr2 = [...arr];//in spread operator they didn't make clone
+    // arr.push(60)
+    // //console.log([arr2])
+    // console.log(arr2)
+    // console.log(arr)
+
+    //CONCAT IN ES5
+
+    // let arr1 = [1,2,3,4,5,6];
+    // let arr2 = [7,8,9,10];
+    // let arr3 = arr1.concat(arr2);
+    // console.log(arr3)
+
+//CONCAT IN ES6
+// let arr1 = [1,2,3,4,5,6];
+//     let arr2 = [7,8,9,10];
+//     let arr3 = [...arr1,...arr2]
+//     console.log(arr3)
+
+
+//ALSO ADD A VALUE SO LETS SEE
+
+// let arr1 = [1,2,3,4,5,6];
+//     let arr2 = [7,8,9,10];
+//     let arr3 = [0,...arr1,...arr2,11,12,13]
+//     console.log(arr3)
+
+
+//SPREAD OPERATORS IN OBJECT
+
+// let obj1 = {
+//     name : "ihsan ullah",
+//     age : 25
+// }
+// console.log({...obj1})
+
+//CONCAT THE TWO OR MORE OBJECTS
+// let obj1 = {
+//     name : "ihsan ullah",
+//     age : 25
+// }
+// let obj2 = {
+//     city : "hangu",
+//     village : "tohg sarai"
+// }
+// let obj3 = {
+//     edu : "graduate"
+// }
+// let obj4 = {...obj1,...obj2,...obj3}
+// console.log(obj4)
+
+
 </script>
 </html>
