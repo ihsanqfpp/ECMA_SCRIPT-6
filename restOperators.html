@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REST OPERATORS</title>
+</head>
+<body>
+    <h1>Rest Operators in Advance JavaScript</h1>
+</body>
+<script>
+    //SYNTAX function sum(name, ...args){ }
+
+    // function sum(){
+    //     console.log(arguments);
+    // }
+    // sum(20,30);
+    // sum(20,30,40,50)
+
+
+    // function sum(){
+    //     let sum = 0;
+    //     for(let i in arguments){
+    //         sum +=arguments[i];
+    //     }
+    //     console.log(sum);
+    // }
+    // sum(10,20);//30
+    // sum(10,20,30,40);//100
+    // sum(40 ,80)//120
+
+    // function sum(name, ...args){
+    //     let sum = 0;
+    //     for(let i in args){
+    //         sum += args[i];
+    //     }
+    //     console.log(`the ${name} of these numbers is : ${sum}`)
+    // }
+    // sum("addition",20,30)
+    // sum("addition",20,30,50);
+
+    //PERFORM ADDITION
+//     function info(name,dept, ...args){
+//         let sum = 0;
+//         for(let i in args){
+//             sum +=args[i]
+//         }
+//         console.log(`my name is ${name} my dept is ${dept} and my marks is : ${sum}`);
+// }
+// info("ihsan ullah", "software eng", 70,80,90,65)
+// info("ahmad khan", "software eng", 70,30,60,65)
+
+//PERFORM MULTIPLICATION
+// function multi(name, ...args){
+//     let multi = 1;
+//     for(let i in args){
+//         multi *= args[i]
+//     }
+//     console.log(`the ${name} of these numbers is : ${multi}`)
+// }
+// multi("multiplication" , 2,4,5)
+
+//PERFORM SUBTRACTION
+
+// function sub(name, ...args) {
+//     let sub = args[0]; // Start with the first number
+//     for (let i = 1; i < args.length; i++) { // Start from the second number
+//         sub -= args[i];
+//     }
+//     console.log(`the ${name} of these numbers is : ${sub}`);
+// }
+// sub("subtraction", 5, 1, 0);
+// sub("subtraction", 100, 10, 75);
+
+//PERFORM DIVISION
+
+function division(name, ...args) {
+    let division = args[0]; 
+    for (let i = 1; i < args.length; i++) { 
+        division /= args[i];
+    }
+    console.log(`the ${name} of these numbers is : ${division}`);
+}
+division("subtraction", 100,25);
+division("subtraction", 100, 10, 2);
+
+
+</script>
+</html>
