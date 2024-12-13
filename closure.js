@@ -13,7 +13,7 @@
 // function outer(){
 //     let userName = "ihsan ullah";
 //     function inner (){
-//         console.log( "inner : " ,userName)
+//         console.log(`inner : ${userName}`)
 //         let message = "how are u";
 //         console.log(message)
 // }
@@ -45,4 +45,10 @@
 // document.getElementById("blueBtn").onclick = clickHandler("blue")
 
 
+// let add = function() {
+//     return function() {
+//         console.log("ihsan ullah");
+//     };
+// };
 
+// add()();
