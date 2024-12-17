@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iterators </title>
+</head>
+<body>
+    <h1>Iterators in Advance JavaScript</h1>
+</body>
+<script>
+    
+    //WE CAN TREVERSE AN ARRAY BY FOLLOWING METHODS
+
+    //BY FOR LOOP
+    // let arr = ["ihsan ullah", "naeem ullah", "safeer ullah", "musawir ihsan"];
+
+    // for (let i = 0; i<arr.length; i++){
+    //     console.log(arr[i]);
+    // }
+
+    //BY FOR..OF METHOD
+//     let arr1 = ["ihsan ullah", "naeem ullah", "safeer ullah", "musawir ihsan"];
+
+// for (let value of arr1) {
+//     console.log(value);
+// }
+
+//BY ITERATORS
+
+// let numbers = [100,200,300];
+// //console.log(numbers)
+// //console.log(typeof numbers[Symbol.iterator]);//output is function
+
+// let iter = numbers[Symbol.iterator]();
+// //console.log(iter)
+// console.log(iter.next());//output is {value: 100, done: false} 
+// console.log(iter.next());//output is {value: 200, done: false} 
+// console.log(iter.next());//output is {value: 300, done: false} 
+// console.log(iter.next());//output is {value: undefined, done: true} 
+
+//IF WE PRINT ONLY 100 OR 100,200 0R ONLY 300
+// let numbers = [100,200,300];
+// let iter = numbers[Symbol.iterator]();
+//console.log(iter.next());//output is 100
+
+//IF WE PRINT 200 AND 300 SO
+// iter.next();
+// console.log(iter.next());//output is {value: 200, done: false} 
+// console.log(iter.next());//output is {value: 300, done: false} 
+
+//IF WE PRINT ONLY 300 SO
+// iter.next();
+// iter.next();
+// console.log(iter.next())//output is {value: 300, done: false} 
+
+//IF WE PRINT SOME TEXT BETWEEN NUMBERS SO
+// iter.next();
+// iter.next();
+// console.log('hello ihsan ullah')
+// console.log(iter.next())
+
+
+//IF WE PRINT SPECIFIC VALUE WITHOUT VALUE AND DONE SO
+// console.log(iter.next().value);//output is 100
+
+
+//ITERATORS USED IN WHILE LOOP
+// //let numbers = [100,200,300,400,50,6,];
+// let iter = numbers[Symbol.iterator]();
+
+// let result = iter.next();
+
+// while(!result.done){
+//     console.log(result.value)
+//     result = iter.next();
+// }
+
+
+//ITEARORS IN STRING
+// let str = "ihsan ullah"
+// let iter = str[Symbol.iterator]();
+
+// let result = iter.next();
+
+// while(!result.done){
+//     console.log(result.value)
+//     result = iter.next();
+// }
+
+//BY FOR-OF LOOP
+// let str = "ihsan ullah"
+//  for(let char of str){
+//     console.log(char)
+//  }
+
+
+
+</script>
+</html>
