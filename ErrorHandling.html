@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error Handling</title>
+</head>
+<body>
+    <h2>Error Handling In Advance Javascript</h2>
+</body>
+<script>
+//WHEN DON'T HAVE ANY ERROR
+// try{
+//     console.log("try case has started");
+
+//     console.log("try case has ended");
+// }catch{
+//     console.log("some error has occured");
+// }
+
+
+//WHEN WE HAVE AN ERROR
+// try{
+//     console.log("try case has started");
+//      blalallala;
+//     console.log("try case has ended");
+// }catch{
+//     console.log("some error has occured");//in this case print text in the catch method
+// }
+
+
+//WE CAN ALSO IDENITFY THE ERROR
+try{
+    console.log("try case has started");
+    balallalal;//ReferenceError: balallalal is not defined
+    console.log("try case has ended");
+}catch(error){
+   console.log(error)//in this case  print error in the catch method
+}
+
+//SOME OF THE ERROR METHODS
+try{
+    balalla;
+}catch(error){
+    console.log(error.name);//refrence error
+    console.log(error.message);//balalla is not defined
+    console.log(erro.stack);//ErrorHandling.html:85 Uncaught ReferenceError: erro is not defined
+}
+</script>
+</html>

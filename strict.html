@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strict</title>
+</head>
+<body>
+    <h2>Strict in Advance Javascript</h2>
+</body>
+<script>
+
+    // a = 5
+    // console.log(a)//they don't show any error in normal mode but in strict mode they show error
+//"use strict";
+// a = 5;
+// console.log(a);//strict.html:54 Uncaught ReferenceError: a is not defined
+
+//EXAMPLE 02
+// a = 5;
+// function test(){
+//     b = 10;
+// }
+// test();//they show error in strict mode
+
+//EXAMPLE 03
+
+//WHEN WE DON'T USE STRICT MODE IN A FUNCTIONA
+// function test(a, b, b){
+//     console.log(a + b + b);
+// }
+// test(5,10,20);//they don't show any error but they show wrong output 
+
+
+//WHEN WE USE STRICT MODE IN A FUNCTION
+// "use strict";
+// function test(a, b, b){
+//     console.log(a + b + b);//Uncaught SyntaxError: Duplicate parameter name not allowed in this context 
+// }
+// test(5,10,20);
+
+
+
+</script>
+</html>
