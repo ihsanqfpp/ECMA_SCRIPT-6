@@ -189,5 +189,82 @@
 // ihsan.submit();
 // ali.submit();
 // ahmad.cancel();
+
+
+//EXAMPLES
+
+// class base{
+//     constructor(name){
+//         this.schoolName = name;
+//         console.log(`school name is : ${this.schoolName}`);
+//     }
+// }
+// class derived extends base{
+
+// }
+// let obj = new derived("HIST");
+
+//EXAMPLE 02
+// class base{
+//     constructor(name){
+//         this.schoolName = name;
+//         console.log(`school name is : ${this.schoolName}`);
+//     }
+// }
+// class derived extends base{
+//     constructor(name){
+//         super(name);
+//         this.schoolName = name;
+//         console.log(`college name is : ${this.schoolName}`);
+//     }
+// }
+// let obj = new derived("HIST");
+
+//EXAMPLE 03
+// class base{
+//     constructor(name){
+//         this.schoolName = name;
+//         console.log(`school name is : ${this.schoolName}`);
+//     }
+//     student(){
+//         console.log(`university name is : ${this.schoolName}`);
+
+//     }
+// }
+// class derived extends base{
+//     constructor(name){
+//         super(name);
+//         this.schoolName = name;
+//         console.log(`college name is : ${this.schoolName}`);
+//     }
+// }
+// let obj = new derived("HIST");
+// obj.student();
+
+//EXAMPLE 04
+// class base{
+//     constructor(name){
+//         this.schoolName = name;
+//         console.log(`school name is : ${this.schoolName}`);
+//     }
+//     student(){
+//         console.log(`university name is : ${this.schoolName}`);
+
+//     }
+// }
+// class derived extends base{
+//     // constructor(name){
+//     //     this.schoolName = name;
+//     //     console.log(`college name is : ${this.schoolName}`);
+//     // }
+//     student(){
+//         super.student()
+//         console.log(`madrasa name is : ${this.schoolName}`);
+
+//     }
+// }
+// let obj = new derived("HIST");
+// obj.student();
+
 </script>
 </html>
