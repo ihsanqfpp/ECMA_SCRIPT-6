@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generators</title>
+</head>
+<body>
+    <h2>Generators In Advance JavaScript</h2>
+</body>
+<script>
+
+    // IN NORMAL FUNCTION
+    // function gen(){
+    //     console.log("one");
+    //     console.log("two");
+    //     console.log("three");
+    // }
+    // gen();
+
+
+    //IN GENERATOR FUNCTION
+    // function gen(){
+    //     console.log("one");
+    //     console.log("two");
+    //     console.log("three");
+    // }
+    // let a = gen();
+    // console.log(a)//one , two , three, undefined
+
+
+    //EXAMPLE 02
+    // function *gen(){
+    //     console.log("one");
+    //     yield("two")
+    //     console.log("two");
+    //     console.log("three");
+    // }
+    // let a = gen();
+    // console.log(a)//they return this type of output gen {<suspended>}
+
+
+    //EXAMPLE 03 yield bascically work as a pause function
+    // function *gen(){
+    //     console.log("one");
+    //     yield("two")
+    //     console.log("three");
+    //     yield("four")
+    //     console.log("three");
+    // }
+    // let a = gen();
+    // console.log(a.next());//one,  generators.html:89 {value: 'two', done: false}
+    // console.log(a.next());//three,  generators.html:89 {value: 'four', done: false}
+
+    // IF WE PRINT ALL VALUES
+    // function *gen(){
+    //     yield("one")
+    //     yield("Two")
+    //     yield("Three")
+    //     yield("Four")
+    // }
+    // let b = gen();
+    // console.log(b.next());
+    // console.log(b.next());
+    // console.log(b.next());
+    // console.log(b.next());
+
+
+    //IF WE PRINT one and four
+    // function *gen(){
+    //     yield("one")
+    //     yield("Two")
+    //     yield("Three")
+    //     yield("Four")
+    // }
+    // let b = gen();
+    // console.log(b.next());
+    // (b.next());
+    // (b.next());
+    // console.log(b.next());
+
+    // WE PRINT ALL VALUES BY FOR OF LOOP
+    // function *gen(){
+    //     yield("one")
+    //     yield("Two")
+    //     yield("Three")
+    //     yield("Four")
+    // }
+    // let b = gen();
+    // for (let resp of b) {
+    //     console.log(resp);
+    // }
+
+
+//IF WE TRANSFER DYNAMICALLY A STRING
+// function *gen(){
+//     let response = yield;
+//     console.log(`Response : ${response}`)
+// }
+// let a = gen();
+// a.next();
+// a.next("one")
+
+//IF WE TRANSFER A NUMBER DYNAMICALLY
+// function *gen(){
+//     let response = yield;
+//     console.log(`Response : ${response}`)
+// }
+// let a = gen();
+// a.next();
+//a.next(10)
+
+
+//IF WE PERFORM ADDITION OR SUBTRACTION OR DIVISION 
+// function *gen(){
+//     let response = (yield) /10;
+//     console.log(`Response : ${response}`)
+// }
+// let a = gen();
+// a.next();
+// a.next(100)
+
+//IF WE SEND MULTIPLE VALUES
+// function *gen(){
+//     let response = [yield,yield,yield];
+//     console.log(`Response : ${response}`)
+// }
+// let a = gen();
+// a.next();
+// a.next(100)
+// a.next(200)
+// a.next(300)
+
+//IF WE PRINT SPECFIC VALUE
+// function *gen(){
+//     let response = [yield,yield,yield];
+//     console.log(`Response : ${response[0]}`)//they only print 100 bcz of index given
+// }
+// let a = gen();
+// a.next();
+// a.next(100)
+// a.next(200)
+// a.next(300)
+
+//ANOTHER METHOD
+// function *gen(){
+//     yield 100
+//     yield ["js", "python", "C++"]
+// }
+// let a = gen();
+// console.log(a.next())//100
+// console.log(a.next())//{value: Array(3), done: false}
+
+//IF WE ADD * AFTER YIELD THEN
+
+// function *gen(){
+//     yield 100
+//     yield * ["js", "python", "C++"]
+// }
+// let a = gen();
+// console.log(a.next())//100
+// console.log(a.next())//{value: 'js', done: false}
+// console.log(a.next())//{value: 'python', done: false}
+// console.log(a.next())//{value: 'c++', done: false}
+
+
+//WE PRINT BY SPREAD OPERTORS
+// function *gen(){
+//     yield 100
+//     yield "JS"
+//     yield "REACT"
+//     yield "C++"
+// }
+// let a = gen();
+// console.log(a.next())//{value: 100, done: false}
+// console.log([...a])// ['JS', 'REACT', 'C++']
+
+//RETURN METHOD ENDED THE FUNCTION
+// function *gen(){
+//     yield 100
+//     yield "JS"
+//     yield "REACT"
+//     yield "C++"
+// }
+// let a = gen();
+// console.log(a.next())//{value: 100, done: false}
+// console.log(a.return ("function Ended"))//{value: 'function Ended', done: true}
+
+
+</script>
+</html>
