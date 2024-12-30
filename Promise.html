@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Promise</title>
+    <!-- Include jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
     <h2>Promise in Advance JavaScript</h2>
@@ -62,6 +64,142 @@
     //     })
     // }
     // console.log(pro(false));//got error
+
+//EXMAPLE 05
+
+// function complete(status) {
+//     return new Promise(function(resolve, reject) {
+//         if (status) {
+//             resolve('completed');
+//         } else {
+//             reject('not completed');
+//         }
+//     });
+// }
+
+// let onfullfill = (result) => {
+//     console.log(result);
+// };
+// let onreject = (error) => {
+//     console.log(error);
+// };
+
+// // Pass `false` or 'true' as an argument to the function
+// complete(false).then(onfullfill).catch(onreject);
+
+
+//EXAMPE 06
+// function complete(status) {
+//     return new Promise(function(resolve, reject) {
+//         console.log('Fetching data , please wait')
+//        setTimeout(() => {
+//         if (status) {
+//             resolve('completed');
+//         } else {
+//             reject('not completed');
+//         }
+//        }, 2000);
+//     });
+// }
+
+// let onfullfill = (result) => {
+//     console.log(result);
+// };
+// let onreject = (error) => {
+//     console.log(error);
+// };
+
+// // Pass `false` or 'true' as an argument to the function
+// complete(false).then(onfullfill).catch(onreject);
+
+
+//EXAMPLE 07
+// function complete(status) {
+//     return new Promise(function(resolve, reject) {
+//         console.log('Fetching data , please wait')
+//        setTimeout(() => {
+//         if (status) {
+//             resolve('completed');
+//         } else {
+//             reject('not completed');
+//         }
+//        }, 4000);
+//     });
+// }
+
+// // Pass `false` or 'true' as an argument to the function
+// complete(false).then( (result) => {
+//     console.log(result);
+// }).catch((error) => {
+//     console.log(error);
+// });
+
+//EXAMPLE 08 PERFORM ADDITION,SUB, DIV, OR MULTI
+// function complete(a , b) {
+//     return new Promise(function(resolve, reject) {
+//         console.log('Fetching data , please wait')
+//         let c = a + b;
+//        setTimeout(() => {
+//         if (a , b) {
+//             resolve(`your answer is : ${c}`);
+//         } else {
+//             reject(`calculation is failed`);
+//         }
+//        }, 4000);
+//     });
+// }
+
+// // Pass `false` or 'true' as an argument to the function
+// complete(10,2).then( (result) => {
+//     console.log(result);
+// }).catch((error) => {
+//     console.log(error);
+// });
+
+//PERFORM DIVISION
+// function complete(a , b) {
+//     return new Promise(function(resolve, reject) {
+//         console.log('Fetching data , please wait')
+//         let c = a / b;
+//        setTimeout(() => {
+//         if (a , b) {
+//             resolve(`your answer is : ${c}`);
+//         } else {
+//             reject(`calculation is failed`);
+//         }
+//        }, 4000);
+//     });
+// }
+
+// // Pass `false` or 'true' as an argument to the function
+// complete(10,0).then( (result) => {
+//     console.log(result);
+// }).catch((error) => {
+//     console.log(error);
+// });
+
+//NOW WE USE AJAX FUNCTION
+// function complete() {
+//     return new Promise(function(resolve, reject) {
+//         console.log('Fetching data , please wait')
+//        setTimeout(() => {
+//        $.get("https://jsonplaceholder.typicode.com/posts", function(data){
+//         console.log(data)
+//        })
+//        }, 4000);
+//     });
+// }
+// complete().then( (result) => {
+//     console.log(result);
+// }).catch((error) => {
+//     console.log(error);
+// });
+
+
+
+
+
+
 
     
 </script>
