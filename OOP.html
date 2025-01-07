@@ -37,10 +37,83 @@
     // obj.message();
     // obj.sorry();
 
+ 
+
+
 
     //TYPES OF METHODS
 
     //01: CONSTRUCTOR METHOD
+    // //CONSTRUCTOR WITHOUT PARAMETER
+    // class Emp{
+    //     constructor()
+    //     {
+    //         console.log("constructor method is called")
+    //     }
+    // }
+    // let obj = new Emp();
+
+
+    //CONSTRUCTOR WITH PARAMETERS
+    // class Emp{
+    //     constructor(name)
+    //     {
+    //         this.name = name;
+    //         console.log(`Name : ${this.name}`)
+    //     }
+    // }
+    // let obj = new Emp("ihsan ullah");
+
+
+    //ANOTHER EXAMPLE
+    // class Emp{
+    //     constructor(name)
+    //     {
+    //         this.name = name;
+    //     }
+    //     getData(){
+    //         console.log(`Name : ${this.name}`)
+    //     }
+    // }
+    // let obj = new Emp("ihsan ullah");
+    // obj.getData();
+
+
+    // CONSTRUCTOR WITH MULTIPLE PARAMETERS
+    // class Emp{
+    //     constructor(name,age,city)
+    //     {
+    //         this.name = name;
+    //         this.age = age;
+    //         this.city = city;
+    //     }
+    //     getData(){
+    //         console.log(`Name : ${this.name} Age is : ${this.age} belong from : ${this.city}`)
+    //     }
+    // }
+    // let obj = new Emp("ihsan ullah", 22 , "hangu");
+    // obj.getData();
+
+
+
+    //CONSTRUCTOR WITH MULTIPLE PARAMETERS AND MULTIPLE OBJECTS
+    // class Emp{
+    //     constructor(name,age,city)
+    //     {
+    //         this.name = name;
+    //         this.age = age;
+    //         this.city = city;
+    //     }
+    //     getData(){
+    //         console.log(`Name : ${this.name} Age is : ${this.age} belong from : ${this.city}`)
+    //     }
+    // }
+    // let obj = new Emp("ihsan ullah", 22 , "hangu");
+    // let obj1 = new Emp ("Asmat ullah", 18, "orakzai")
+    // obj.getData();
+    // obj1.getData();
+
+
     // class hello{
     //     constructor(){
     //         let name;
@@ -55,64 +128,7 @@
     // obj.second();
     // let obj2 = new hello();
 
-    //EXAMPLE 02
-    // class hello{
-    //     constructor(name){
-    //         this.studentname = name;
-    //         console.log("hello ihsan ullah")
-    //     }
-    //     second(){
-    //         console.log("your tribe is " , this.studentname)
-    //     }
-    // }
-    // let obj = new hello("orakzai");
-    // obj.second();
-    
-//02: WHEN PASS TO ARGUMENTS
-// class hello{
-//         constructor(name,age){
-//             this.studentname = name;
-//             this.studentage = age;
-//             console.log("hello ihsan ullah")
-//         }
-//         second(){
-//             console.log(`your tribe is ${this.studentname} and your age is ${this.studentage}`);
-//         }
-//     }
-//     let obj = new hello("orakzai",25);
-//     obj.second();
 
-
-    //EXAMPLE 02
-    //  class hello{
-    //     constructor(name,age,tribe){
-    //         this.studentname = name;
-    //         this.studentage = age;
-    //         this.studentTribe = tribe;
-    //     }
-    //     second(){
-    //         console.log(`your name is ${this.studentname} and your age is ${this.studentage} your tribe is ${this.studentTribe}`);
-    //     }
-    // }
-    // let obj = new hello("Ihsan Ullah",25,"orakzai");
-    // obj.second();
-
-
-    //EXAMPLE 03
-    // class hello{
-    //     constructor(name,age,tribe){
-    //         this.studentname = name;
-    //         this.studentage = age;
-    //         this.studentTribe = tribe;
-    //     }
-    //     second(){
-    //         console.log(`your name is ${this.studentname} and your age is ${this.studentage} your tribe is ${this.studentTribe}`);
-    //     }
-    // }
-    // let obj = new hello("Ihsan Ullah",25,"orakzai");
-    // let obj2 = new hello("ahmad",30,"bangash");
-    // obj.second();
-    // obj2.second();
 
 
     //STATIC METHOD
