@@ -9,24 +9,66 @@
     <h1>Destructuring Array in  Advance JavaScript</h1>
 </body>
 <script>
-// let user = ["ihsan ullah" , 25 , "peshawar"];
 
-// let [name ,age , city] = user;
-// console.log(user);
-// console.log(name);
-// console.log(age);
-// console.log(city);
+
+//ARRAY DESTRUCTING BEFORE ES6
+// let fruits = ["apple","mango","orange"];
+// let fruit1 = fruits[0];
+// let fruit2 = fruits[1];
+// let fruit3 = fruits[2];
+// console.log(fruit1)
+// console.log(fruit2)
+// console.log(fruit3)
+
+//NOW IN ES6
+// let fruits = ["apple","mango","orange"];
+// let [fruit1,fruit2,fruit3] = fruits;
+// console.log(fruit1)
+// console.log(fruit2)
+// console.log(fruit3)
+
+//PICK DESIRED ELEMENTS IN ARRAY
+// let fruits = ["apple","mango","orange","banana","apricot","pomegrante"];
+// let [fruit1, ,fruit2, , fruit3 ] = fruits
+// console.log(fruit1)//apple
+// console.log(fruit2)//orange
+// console.log(fruit3)//apricot
+
+//REST OPERATORS IN DESTRUCTING
+// let fruits = ["apple","mango","orange","banana","apricot","pomegrante","guava"];
+// let [fruit1,fruit2,fruit3,...favFruits]= fruits
+// console.log(fruit1)
+// console.log(fruit2)
+// console.log(fruit3)
+// console.log(favFruits)
+
+//ARRAY DESTRUCTING AND DEFAULT VALUES
+// let arr = [10];
+// let [val1,val2] = arr;
+// console.log(val1,val2)//10, undefined
+
+//ANOTHER EXAMPLE PASSED DEFAULT VALUES
+// let arr = [10];
+// let [val1 = 15,val2 = 30] = arr;
+// console.log(val1)//10
+// console.log(val2)//30
+
+//EXAMPLE 03
+// let arr = [];
+// let [val1 = 10,val2 = 30] = arr;
+// console.log(val1,val2)//10 30
+
+
 
 //IF WE REMOVE ONE OR TWO OR MORE VALUE FROM ARRAY THEY SHOW UNDEFINED
 
 // let user = ["ihsan ullah" , 25 ,];
-
 // let [name ,age , city] = user;
 // console.log(name);
 // console.log(age);
 // console.log(city);//they show undefined bcz city isn't present in array
 
-//IF WE DONT'T WRITE VALUE IN ARRAY
+//IF WE DONT'T WRITE VALUE IN ARRAY BUT PASS A DEFAULT VALUE
 // let user = [ , 25 , "peshawar"];
 // let [name = "ihsan " ,age  , city] = user;
 // console.log(name);
@@ -48,7 +90,25 @@
 // console.log(args);
 
 
-//USED IN FUNCTION
+
+//02 : FUNCTION DESTRUCTING
+// function calcluate(a ,b){
+//     const addition = a + b
+//     const subtraction = a - b
+//     const division = a / b
+//     const multiplication = a * b
+//     const remainder = a % b
+
+//     return[addition,subtraction,division,multiplication,remainder];
+
+// }
+// const [add,sub,div,multi,remain] = calcluate(50,10)
+// console.log(`the addition  is : ${add}`)
+// console.log(`the subtraction  is : ${sub}`)
+// console.log(`the division  is : ${div}`)
+// console.log(`the multiplication  is : ${multi}`)
+// console.log(`the remainder  is : ${remain}`)
+
 
 // function user ([name, age , city]){
 // console.log(name);
@@ -73,7 +133,7 @@
 
 // let user = {
 //     name : "ihsan ullah",
-//     age : 25,
+ //     age : 25,
 //     city : "peshawar"
 // }
 // let {name , age, city} = user;
@@ -82,6 +142,7 @@
 // console.log(age);
 
 
+//PASSED  A DEFAULT VALUES
 // let user = {
 //     //name : "ihsan ullah",
 //     age : 25,
@@ -110,6 +171,28 @@
 // let arr2 = ["haffez ullah" , "safeer ullah" , "musawir ihsan"];
 // let arr = [...arr1,...arr2];
 // console.log(arr)
+
+//NESTED OBJECT DESTRUCTING
+// let employe = {
+//     id : 205,
+//     name : {
+//         fname : "ihsan",
+//         lname : "ullah"
+//     },
+//     gender : "male"
+// }
+// let {
+//     id,
+//     name : {
+//         fname,
+//         lname,
+//     },
+//     gender
+// } = employe;
+// console.log(id)
+// console.log(fname)
+// console.log(lname)
+// console.log(gender)
 
 
 
