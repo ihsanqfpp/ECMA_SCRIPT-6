@@ -9,42 +9,171 @@
     
 </body>
 <script>
-// class employe{
-//     constructor(){
-//         console.log("employe class")
+
+
+
+// class Parent {
+//     name;
+//     show() {
+//         console.log("hello from parent class");
 //     }
 // }
-// class manager extends employe{
-    
+
+// class Child extends Parent {
+//     // Inherits the show() method from Parent
 // }
-// let obj = new employe();
+
+// let obj = new Child();
+// obj.show();// Output: hello from parent class
+// obj.name = "ihsan ullah"
+// console.log(obj.name)
+
 
 //EXAMPLE 02
-// class employe{
-//     constructor(){
-//         console.log("employe class")
+// class Parent {
+//     name;
+//     show() {
+//         console.log("hello from parent class");
 //     }
 // }
-// class manager extends employe{
+
+// class Child extends Parent {
+//     get()
+//     {
+//         console.log("Hello ! from child class")
+//     }
+// }
+
+// let obj = new Child();
+// obj.show();// Output: hello from parent class
+// obj.get();
+
+
+//CONSTRUCTOR IN INHERITANCE
+// class parent{
+//     constructor()
+//     {
+//         console.log(`parent class called by constructor`)
+//     }
+// }
+// class child extends parent{
+
+// }
+// let obj = new child();
+
+
+//PARAMETERIZED CONSTRUCTOR
+// class parent{
+//     constructor(name)
+//     {
+//         console.log(`parent class called by constructor called by ${name}`)
+//     }
+// }
+// class child extends parent{
+
+// }
+// let obj = new child("ihsan ullah");
+
+
+//EXAMPLE 01
+// class parent{
+//     constructor(name)
+//     {
+//         this.name = name;
+//         console.log(`parent class called by constructor`)
+//     }
+//     show(){
+//         console.log(`Name is : ${this.name}`)
+//     }
+// }
+// class child extends parent{
+
+// }
+// let obj = new child("ihsan ullah");
+// obj.show();
+
+
+//SUPER KEYWORD IN INHERITANCE
+// class parent{
+//     constructor(name)
+//     {
+//         this.name = name;
+//         console.log(`parent class called by constructor`)
+//     }
     
 // }
-// let obj = new manager();
-
-
-//EXAMLE 03
-// class employe{
-//     constructor(){
-//         console.log("employe class")
-//     }
-// }
-// class manager extends employe{
+// class child extends parent{
 //     constructor(){
 //         super();
-//         console.log("manager class")
+//         console.log("child class called by constructor")
 //     }
-// } 
-// let obj = new employe();
-// let obj2 = new manager();
+
+// }
+// let obj = new child();
+
+//PARAMETERIZED PARENT CONSTRUCTOR
+// class parent{
+//     constructor(name)
+//     {
+//         this.name = name;
+//         console.log(`parent class called by constructor`)
+//         console.log(`Name is  :${this.name}`)
+//     }
+    
+// }
+// class child extends parent{
+//     constructor(){
+//         super("ihsan");
+//         console.log("child class called by constructor")
+//     }
+
+// }
+// let obj = new child();
+
+
+//WHEN BOTH PARENT AND CHILD CLASS ARE PARAMERTIZED
+// class parent{
+//     constructor(name)
+//     {
+//         this.name = name;
+//         console.log(`parent class called by constructor`)
+//         console.log(`Name is  :${this.name}`)
+//     }
+    
+// }
+// class child extends parent{
+//     constructor(city){
+//         super("ihsan");
+//         console.log("child class called by constructor")
+//         console.log(`city is : ${city}`)
+//     }
+
+// }
+// let obj = new child("hangu");
+
+
+//EXAMPLE 01
+// class Parent {
+//     constructor(name) {
+//         this.name = name;
+//         console.log(`Parent class called by constructor`);
+//         console.log(`Name is: ${this.name}`);
+//     }
+// }
+
+// class Child extends Parent {
+//     constructor(city) {
+//         super("ihsan");  // Call super() before accessing `this`
+//         this.city = city;  // Now safe to use `this`
+//         console.log("Child class called by constructor");
+//         console.log(`City is: ${this.city}`);
+//     }
+// }
+
+// let obj = new Child("Hangu");
+
+
+
 
 //EXAMPLE 04
 // class employe{

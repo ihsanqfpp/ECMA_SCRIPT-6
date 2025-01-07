@@ -11,8 +11,20 @@
     <h2>Promise in Advance JavaScript</h2>
 </body>
 <script>
-    
-    //EXAMPLE 01
+
+
+// let pro = new Promise(function(resolve,reject){
+//     let a = 2 + 2;
+//         if (a == 5){
+//         console.log("Success")
+//     }
+//     else{
+//         console.log("rejected")
+//     }
+// })
+// console.log(pro)
+
+//EXAMPLE 01
     // let status= true;
 
     // let pro = new Promise(function(resolve,reject){
@@ -25,21 +37,7 @@
     // })
     // console.log(pro);//Promise {<fulfilled>: 'sucesss'}
 
-    //EXAMPLE 02
-
-    // function pro(status){
-    //     return new Promise(function(resolve,reject){
-    //         if(status){
-    //             resolve('sucesss');
-    //         }
-    //         else{
-    //             reject('got error');
-    //         }
-    //     })
-    // }
-    // console.log(pro);//pro(status)
-
-    //EXAMPLE 03
+//EXAMPLE 02
     // function pro(status){
     //     return new Promise(function(resolve,reject){
     //         if(status){
@@ -52,7 +50,7 @@
     // }
     // console.log(pro(true));//sucesss
 
-    //EXAMPLE 04
+ //EXAMPLE 03
     // function pro(status){
     //     return new Promise(function(resolve,reject){
     //         if(status){
@@ -65,74 +63,84 @@
     // }
     // console.log(pro(false));//got error
 
-//EXMAPLE 05
-
-// function complete(status) {
-//     return new Promise(function(resolve, reject) {
-//         if (status) {
-//             resolve('completed');
-//         } else {
-//             reject('not completed');
-//         }
-//     });
-// }
-
-// let onfullfill = (result) => {
-//     console.log(result);
-// };
-// let onreject = (error) => {
-//     console.log(error);
-// };
-
-// // Pass `false` or 'true' as an argument to the function
-// complete(false).then(onfullfill).catch(onreject);
-
-
-//EXAMPE 06
-// function complete(status) {
-//     return new Promise(function(resolve, reject) {
-//         console.log('Fetching data , please wait')
-//        setTimeout(() => {
-//         if (status) {
-//             resolve('completed');
-//         } else {
-//             reject('not completed');
-//         }
-//        }, 2000);
-//     });
-// }
-
-// let onfullfill = (result) => {
-//     console.log(result);
-// };
-// let onreject = (error) => {
-//     console.log(error);
-// };
-
-// // Pass `false` or 'true' as an argument to the function
-// complete(false).then(onfullfill).catch(onreject);
-
-
-//EXAMPLE 07
-// function complete(status) {
-//     return new Promise(function(resolve, reject) {
-//         console.log('Fetching data , please wait')
-//        setTimeout(() => {
-//         if (status) {
-//             resolve('completed');
-//         } else {
-//             reject('not completed');
-//         }
-//        }, 4000);
-//     });
-// }
-
-// // Pass `false` or 'true' as an argument to the function
-// complete(false).then( (result) => {
-//     console.log(result);
-// }).catch((error) => {
-//     console.log(error);
+//USED THEN AND CATCH METHODS
+// let pro = new Promise(function(resolve, reject) {
+//     let a = 2 + 2;
+//     if (a == 5) {
+//         resolve("Success");
+//     } else {
+//         reject("Failure");
+//     }
 // });
+
+// pro.then((msg) => {
+//     document.write(`${msg} - promise fulfilled<br>`);
+// }).catch((msg) => {
+//     document.write(`${msg} - promise rejected<br>`);
+// });
+
+//EXAMPLE 01
+// let pro = new Promise(function(resolve, reject) {
+//     let a = 2 + 2;
+//     if (a == 4) {
+//         resolve("Success");
+//     } else {
+//         reject("Failure");
+//     }
+// });
+
+// let onfullfill = (msg) => {
+//     document.write(`${msg} - promise fulfilled<br>`);
+// }
+// let onreject = (msg) => {
+//     document.write(`${msg} - promise rejected<br>`);
+// };
+// pro.then(onfullfill).catch(onreject);
+
+
+//EXMAPLE 01
+
+// function complete(status) {
+//     return new Promise(function(resolve, reject) {
+//         if (status) {
+//             resolve('completed');
+//         } else {
+//             reject('not completed');
+//         }
+//     });
+// }
+// let onfullfill = (result) => {
+//     console.log(result);
+// };
+// let onreject = (error) => {
+//     console.log(error);
+// };
+// // Pass `false` or 'true' as an argument to the function
+// complete(false).then(onfullfill).catch(onreject);
+
+
+//USE FOR PENDING
+// let pro = new Promise(function(resolve, reject) {
+//     document.write("pending please wait ....")
+   
+//     setTimeout(() =>{
+//         let a = 2 + 2;
+//     if (a == 4) {
+//         resolve("Success");
+//     } else {
+//         reject("Failure");
+//     }
+//     },4000)
+// });
+
+// let onfullfill = (msg) => {
+//     document.write(`${msg} - promise fulfilled<br>`);
+// }
+// let onreject = (msg) => {
+//     document.write(`${msg} - promise rejected<br>`);
+// };
+// pro.then(onfullfill).catch(onreject);
+
 
 //EXAMPLE 08 PERFORM ADDITION,SUB, DIV, OR MULTI
 // function complete(a , b) {
